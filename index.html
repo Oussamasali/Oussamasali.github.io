@@ -1,0 +1,391 @@
+<?php
+// Récupération des messages éventuels (succès / erreur) envoyés par send_mail.php
+$status  = isset($_GET['status']) ? $_GET['status'] : '';
+$message = isset($_GET['msg']) ? $_GET['msg'] : '';
+?>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Portfolio - Oussama Sali</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Portfolio professionnel de Oussama Sali, étudiant en informatique spécialisé en développement web, réseaux, vision par ordinateur et systèmes intelligents.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-content">
+      <div class="logo">Oussama <span>Sali</span></div>
+      <nav class="nav">
+        <a href="#accueil">Accueil</a>
+        <a href="#competences">Compétences</a>
+        <a href="#projets">Projets</a>
+        <a href="#parcours">Parcours</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Accueil -->
+    <section id="accueil" class="section hero">
+      <div class="container hero-layout">
+        <!-- Colonne gauche : photo -->
+        <div class="hero-photo-wrapper">
+          <div class="photo-bg-glow"></div>
+          <div class="photo-frame">
+            <!-- Remplace photo.jpg par le nom de ton fichier -->
+            <img src="photo.jpg" alt="Photo de Oussama Sali" class="hero-photo">
+          </div>
+        </div>
+
+        <!-- Colonne droite : texte -->
+        <div class="hero-content">
+          <p class="tagline">Étudiant en informatique</p>
+          <h1>Réseaux & Multimédia</h1>
+          <p class="hero-text">
+            Je suis <strong>Oussama Sali</strong>, étudiant en Master 2 Réseaux et Multimédia.
+            Passionné par le développement web, les réseaux et l’intelligence artificielle,
+            je réalise des projets allant des sites web dynamiques aux systèmes IoT
+            et à la vision par ordinateur.
+          </p>
+          <p class="hero-text small">
+            Mon objectif est de poursuivre mes études  à l'étranger et de mettre mes compétences
+            au service de projets innovants à fort impact scientifique et technologique.
+          </p>
+          <div class="hero-actions">
+            <a href="#projets" class="btn primary">Voir mes projets</a>
+            <a href="#contact" class="btn secondary">Me contacter</a>
+            <a href="CV_Oussama_Sali.pdf" class="btn outline" target="_blank" rel="noopener noreferrer">Télécharger mon CV</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Compétences -->
+    <section id="competences" class="section">
+      <div class="container">
+        <h2>Compétences</h2>
+        <p class="section-intro">
+          Compétences techniques et méthodologiques développées au cours de mon parcours
+          universitaire (Licence et Master) et mises en pratique dans plusieurs projets
+          académiques et personnels.
+        </p>
+        <div class="skills-layout">
+          <div class="skills-grid">
+            <div class="card skill-card">
+              <h3>Développement Web</h3>
+              <ul>
+                <li><span class="dot"></span> HTML, CSS, JavaScript</li>
+                <li><span class="dot"></span> PHP, MySQL</li>
+                <li><span class="dot"></span> Node.js, jQuery, Bootstrap</li>
+                <li><span class="dot"></span> Sites dynamiques, formulaires, authentification</li>
+              </ul>
+            </div>
+            <div class="card skill-card">
+              <h3>Programmation</h3>
+              <ul>
+                <li><span class="dot"></span> Python, Java, C</li>
+                <li><span class="dot"></span> Programmation orientée objet</li>
+                <li><span class="dot"></span> Structures de données & algorithmes</li>
+              </ul>
+            </div>
+            <div class="card skill-card">
+              <h3>IA, Data & Vision</h3>
+              <ul>
+                <li><span class="dot"></span> NumPy, Pandas</li>
+                <li><span class="dot"></span> OpenCV, traitement d’images</li>
+                <li><span class="dot"></span> Expérimentation en vision par ordinateur</li>
+              </ul>
+            </div>
+            <div class="card skill-card">
+              <h3>Réseaux & Systèmes</h3>
+              <ul>
+                <li><span class="dot"></span> Cisco Packet Tracer</li>
+                <li><span class="dot"></span> Notions de routage & adressage</li>
+                <li><span class="dot"></span> Linux, Windows</li>
+              </ul>
+            </div>
+            <div class="card skill-card">
+              <h3>Conception & Méthodes</h3>
+              <ul>
+                <li><span class="dot"></span> UML, Merise</li>
+                <li><span class="dot"></span> Analyse et modélisation de systèmes</li>
+              </ul>
+            </div>
+            <div class="card skill-card">
+              <h3>Langues</h3>
+              <ul>
+                <li><span class="dot"></span> Arabe : langue maternelle</li>
+                <li><span class="dot"></span> Français : niveau B1+ (TCF 391)— niveau opérationnel supérieur au niveau certifié.</li>
+                <li><span class="dot"></span> Anglais : intermédiaire</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="skills-side">
+            <h3>Atouts personnels</h3>
+            <ul>
+              <li><span class="tag">Autonomie</span> <span class="muted">capable de mener un projet du cahier des charges à la réalisation</span></li>
+              <li><span class="tag">Rigueur</span> <span class="muted">code structuré, documentation et tests</span></li>
+              <li><span class="tag">Analyse</span> <span class="muted">décomposition de problèmes complexes en sous-tâches claires</span></li>
+              <li><span class="tag">Curiosité</span> <span class="muted">autoformation continue et veille technologique</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projets -->
+    <section id="projets" class="section alt">
+      <div class="container">
+        <h2>Projets</h2>
+
+        <div class="project project-with-image">
+          <div class="project-image">
+            <img src="projet-recherche.png" alt="Projet de recherche vision par ordinateur" />
+          </div>
+          <div class="project-text">
+            <h3>Projet de recherche Master 2 – Vision par ordinateur & IA</h3>
+            <p class="project-meta">2025 (en cours) &nbsp;•&nbsp; Python · OpenCV · IA · Biométrie</p>
+            <p>
+              Projet de recherche de Master 2 centré sur la vision par ordinateur et l’intelligence artificielle,
+              appliquées à l’authentification biométrique.
+            </p>
+            <p class="project-details">
+              <strong>Thème :</strong> Gaze Dynamics for User Authentication – expérimentation sur
+              l’authentification par suivi oculaire (dynamique du regard).<br>
+              <strong>Objectifs :</strong> analyse des mouvements oculaires, extraction de caractéristiques,
+              étude de la faisabilité d’un système d’authentification basé sur le regard.
+            </p>
+          </div>
+        </div>
+
+        <div class="project project-with-image">
+          <div class="project-image">
+            <img src="projet-sport.png" alt="Site web dynamique de sport" />
+          </div>
+          <div class="project-text">
+            <h3>Site web dynamique de sport</h3>
+            <p class="project-meta">Projet académique (Licence) – 2024 &nbsp;•&nbsp; HTML · CSS · PHP · MySQL</p>
+            <p>
+              Création d’un site web dynamique dédié au sport, permettant la gestion d’utilisateurs
+              et la consultation de contenus personnalisés.
+            </p>
+            <p class="project-details">
+              <strong>Fonctionnalités :</strong> plateforme d’inscription, de nutrition et d’entraînement,
+              gestion des profils, formulaires sécurisés, base de données MySQL.<br>
+              <strong>Rôle :</strong> développement complet (front-end et back-end).
+            </p>
+          </div>
+        </div>
+
+        <div class="project project-with-image">
+          <div class="project-image">
+            <img src="projet-maison.png" alt="Maison intelligente connectée" />
+          </div>
+          <div class="project-text">
+            <h3>Maison intelligente connectée (Smart Home)</h3>
+            <p class="project-meta">Projet académique – 2023 &nbsp;•&nbsp; IoT · Capteurs · Microcontrôleur · MQTT</p>
+            <p>
+              Conception d’un système IoT de maison intelligente pour surveiller l’environnement domestique
+              et détecter des situations de risque.
+            </p>
+            <p class="project-details">
+              <strong>Fonctionnalités :</strong> détection de fumée, de température et d’incendie,
+              communication via MQTT, affichage des alertes en temps réel.<br>
+              <strong>Rôle :</strong> choix et intégration des capteurs, programmation du microcontrôleur,
+              configuration de la communication et de la logique d’alerte.
+            </p>
+          </div>
+        </div>
+
+        <div class="project project-with-image">
+          <div class="project-image">
+            <img src="projet-tourisme.png" alt="Site touristique Bordj Bou Arréridj" />
+          </div>
+          <div class="project-text">
+            <h3>Site touristique – wilaya de Bordj Bou Arréridj</h3>
+            <p class="project-meta">Projet personnel – 2022 &nbsp;•&nbsp; HTML · CSS · PHP/MySQL</p>
+            <p>
+              Création d’un site web dynamique pour promouvoir le tourisme dans la wilaya de Bordj Bou Arréridj.
+            </p>
+            <p class="project-details">
+              <strong>Objectifs :</strong> présenter les lieux touristiques, organiser l’information
+              par catégories, offrir une navigation claire.<br>
+              <strong>Rôle :</strong> conception de l’architecture du site, intégration des contenus
+              (textes, images), mise en place de la partie dynamique avec PHP/MySQL.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Parcours -->
+    <section id="parcours" class="section">
+      <div class="container">
+        <h2>Parcours</h2>
+        <p class="section-intro">
+          Un parcours cohérent orienté vers l’informatique, partant des bases en mathématiques
+          vers des projets concrets en réseaux, multimédia, développement web et intelligence artificielle.
+        </p>
+        <div class="timeline">
+
+          <div class="timeline-item">
+            <div class="timeline-date-block">
+              <span class="timeline-year">2024</span>
+              <span class="timeline-separator">–</span>
+              <span class="timeline-year">Aujourd’hui</span>
+            </div>
+            <div class="timeline-content">
+              <h3>Master 2 Réseaux et Multimédia</h3>
+              <p class="timeline-location">
+                Université El Bachir El Ibrahimi, Bordj Bou Arréridj
+              </p>
+              <ul class="timeline-details">
+                <li>Spécialisation en réseaux, multimédia et systèmes distribués.</li>
+                <li>Projet de recherche en vision par ordinateur et intelligence artificielle
+                    appliquées à l’authentification biométrique par suivi oculaire.</li>
+                <li>J’ai complété le Master 1 en étant
+                  <span style="color:#f97316;font-weight:bold;">4ᵉ de promotion</span>,
+                  ce qui renforce la cohérence et la continuité de mon parcours.</li>
+                <li>Compétences avancées en analyse, expérimentation et rédaction scientifique.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-date-block">
+              <span class="timeline-year">2021</span>
+              <span class="timeline-separator">–</span>
+              <span class="timeline-year">2024</span>
+            </div>
+            <div class="timeline-content">
+              <h3>Licence en Informatique</h3>
+              <p class="timeline-location">
+                Spécialité Ingénierie des Systèmes d’Information et du Logiciel – Université El Bachir El Ibrahimi
+              </p>
+              <ul class="timeline-details">
+                <li>Classement :
+                  <span style="color:#f97316;font-weight:bold;">3ᵉ de promotion</span>.
+                </li>
+                <li>Projets : site web sportif, site touristique, projets en systèmes d’information.</li>
+                <li>Bases solides en programmation, bases de données, UML/Merise et développement web.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-date-block">
+              <span class="timeline-year">2020</span>
+            </div>
+            <div class="timeline-content">
+              <h3>Baccalauréat Mathématiques Techniques</h3>
+              <p class="timeline-location">
+                Lycée Houari Boumediène, Hammam Sokhna, Bordj Bou Arréridj
+              </p>
+              <ul class="timeline-details">
+                <li>Mention <strong>Bien</strong> – note :
+                  <span style="color:#f97316;font-weight:bold;">14,33 / 20</span>.
+                </li>
+                <li>Forte base en mathématiques et sciences techniques.</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- À propos -->
+    <section class="section alt">
+      <div class="container">
+        <h2>À propos</h2>
+        <p class="about-text">
+          Je suis un étudiant en informatique motivé et curieux, avec un intérêt particulier
+          pour le développement web, les réseaux, la vision par ordinateur et les systèmes intelligents.
+          J’apprécie le travail bien structuré, de la phase de conception (UML, Merise) jusqu’à la
+          réalisation technique et aux tests.
+        </p>
+        <p class="about-text">
+          Je souhaite poursuivre mes études en France afin de renforcer mes compétences, d’évoluer
+          dans un environnement académique exigeant et de contribuer à des projets concrets
+          dans les domaines du web, des systèmes d’information et de l’intelligence artificielle.
+        </p>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section">
+      <div class="container">
+        <h2>Contact</h2>
+        <p>
+          Vous pouvez me contacter directement par e-mail ou via ce formulaire.
+        </p>
+
+        <!-- Notifications succès / erreur -->
+        <?php if ($status === 'success' && $message !== ''): ?>
+          <div class="alert alert-success">
+            <?php echo htmlspecialchars($message); ?>
+          </div>
+        <?php elseif ($status === 'error' && $message !== ''): ?>
+          <div class="alert alert-error">
+            <?php echo htmlspecialchars($message); ?>
+          </div>
+        <?php endif; ?>
+
+        <div class="contact-grid">
+          <div>
+            <ul class="contact-list">
+              <li><strong>Email fixe :</strong> <a href="mailto:salioussama213@gmail.com">salioussama213@gmail.com</a></li>
+              <li><strong>Téléphone :</strong> +213 791 81 19 34</li>
+            </ul>
+            <p class="contact-note">
+              Le message du formulaire sera envoyé à cette adresse. Veillez à indiquer un objet clair et un message détaillé.
+            </p>
+          </div>
+
+          <!-- Formulaire relié à send_mail.php -->
+          <form class="contact-form" action="send_mail.php" method="POST">
+            <div class="form-group">
+              <label for="from_email">Votre e-mail</label>
+              <input type="email" id="from_email" name="from_email" placeholder="votre.email@example.com" required>
+            </div>
+            <div class="form-group">
+              <label for="subject">Objet</label>
+              <input type="text" id="subject" name="subject" placeholder="Objet de votre message" required>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Votre message" required></textarea>
+            </div>
+            <button type="submit" class="btn primary">Envoyer</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <p>&copy; <span id="year"></span> Oussama Sali. Tous droits réservés.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Met à jour l'année
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Forcer le retour à Accueil (haut de page) après rafraîchissement
+    window.addEventListener('load', function () {
+      // Nettoie le hash (#contact, #projets...) si présent
+      if (window.location.hash) {
+        var cleanUrl = window.location.origin + window.location.pathname + window.location.search;
+        history.replaceState(null, '', cleanUrl);
+      }
+      // Remonte en haut de la page
+      window.scrollTo(0, 0);
+    });
+  </script>
+</body>
+</html>
