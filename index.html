@@ -1,8 +1,3 @@
-<?php
-// Récupération des messages éventuels (succès / erreur) envoyés par send_mail.php
-$status  = isset($_GET['status']) ? $_GET['status'] : '';
-$message = isset($_GET['msg']) ? $_GET['msg'] : '';
-?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -34,7 +29,6 @@ $message = isset($_GET['msg']) ? $_GET['msg'] : '';
         <div class="hero-photo-wrapper">
           <div class="photo-bg-glow"></div>
           <div class="photo-frame">
-            <!-- Remplace photo.jpg par le nom de ton fichier -->
             <img src="photo.jpg" alt="Photo de Oussama Sali" class="hero-photo">
           </div>
         </div>
@@ -50,7 +44,7 @@ $message = isset($_GET['msg']) ? $_GET['msg'] : '';
             et à la vision par ordinateur.
           </p>
           <p class="hero-text small">
-            Mon objectif est de poursuivre mes études  à l'étranger et de mettre mes compétences
+            Mon objectif est de poursuivre mes études à l'étranger et de mettre mes compétences
             au service de projets innovants à fort impact scientifique et technologique.
           </p>
           <div class="hero-actions">
@@ -277,7 +271,7 @@ $message = isset($_GET['msg']) ? $_GET['msg'] : '';
 
           <div class="timeline-item">
             <div class="timeline-date-block">
-              <span class="timeline-year">2020</span>
+              <span class="timeline-year">2021</span>
             </div>
             <div class="timeline-content">
               <h3>Baccalauréat Mathématiques Techniques</h3>
@@ -319,20 +313,7 @@ $message = isset($_GET['msg']) ? $_GET['msg'] : '';
     <section id="contact" class="section">
       <div class="container">
         <h2>Contact</h2>
-        <p>
-          Vous pouvez me contacter directement par e-mail ou via ce formulaire.
-        </p>
-
-        <!-- Notifications succès / erreur -->
-        <?php if ($status === 'success' && $message !== ''): ?>
-          <div class="alert alert-success">
-            <?php echo htmlspecialchars($message); ?>
-          </div>
-        <?php elseif ($status === 'error' && $message !== ''): ?>
-          <div class="alert alert-error">
-            <?php echo htmlspecialchars($message); ?>
-          </div>
-        <?php endif; ?>
+        <p>Vous pouvez me contacter directement par e-mail ou via ce formulaire.</p>
 
         <div class="contact-grid">
           <div>
@@ -345,21 +326,26 @@ $message = isset($_GET['msg']) ? $_GET['msg'] : '';
             </p>
           </div>
 
-          <!-- Formulaire relié à send_mail.php -->
-          <form class="contact-form" action="send_mail.php" method="POST">
+          <!-- Formulaire Formspree -->
+          <form method="POST" action="https://formspree.io/f/mankqqlv">
+            <input type="hidden" name="_subject" value="Nouveau message depuis le portfolio" />
+
             <div class="form-group">
-              <label for="from_email">Votre e-mail</label>
-              <input type="email" id="from_email" name="from_email" placeholder="votre.email@example.com" required>
+              <label for="email">Votre e-mail</label>
+              <input type="email" id="email" name="email" required>
             </div>
+
             <div class="form-group">
               <label for="subject">Objet</label>
-              <input type="text" id="subject" name="subject" placeholder="Objet de votre message" required>
+              <input type="text" id="subject" name="subject" required>
             </div>
+
             <div class="form-group">
               <label for="message">Message</label>
-              <textarea id="message" name="message" rows="5" placeholder="Votre message" required></textarea>
+              <textarea id="message" name="message" rows="4" required></textarea>
             </div>
-            <button type="submit" class="btn primary">Envoyer</button>
+
+            <button type="submit">Envoyer</button>
           </form>
         </div>
       </div>
@@ -378,12 +364,10 @@ $message = isset($_GET['msg']) ? $_GET['msg'] : '';
 
     // Forcer le retour à Accueil (haut de page) après rafraîchissement
     window.addEventListener('load', function () {
-      // Nettoie le hash (#contact, #projets...) si présent
       if (window.location.hash) {
         var cleanUrl = window.location.origin + window.location.pathname + window.location.search;
         history.replaceState(null, '', cleanUrl);
       }
-      // Remonte en haut de la page
       window.scrollTo(0, 0);
     });
   </script>
