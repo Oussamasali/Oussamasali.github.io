@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/png" href="favicon.png">
 </head>
+
 <body>
   <header class="site-header">
     <div class="container header-content">
@@ -16,6 +17,7 @@
         <a href="#accueil">Accueil</a>
         <a href="#competences">Compétences</a>
         <a href="#projets">Projets</a>
+        <a href="#galerie">Galerie</a>
         <a href="#parcours">Parcours</a>
         <a href="#recommandations">Recommandations</a>
         <a href="#contact">Contact</a>
@@ -180,7 +182,7 @@
           </div>
           <div class="project-text">
             <h3>Maison intelligente connectée (Smart Home)</h3>
-            <p class="project-meta">Projet académique – 2023 &nbsp;•&nbsp; IoT · Capteurs · Microcontrôleur · MQTT</p>
+            <p class="project-meta">Projet académique – 2023 &nbsp;•&nbsp; IoT  . MQTT</p>
             <p>
               Conception d’un système IoT de maison intelligente pour surveiller l’environnement domestique
               et détecter des situations de risque.
@@ -188,8 +190,9 @@
             <p class="project-details">
               <strong>Fonctionnalités :</strong> détection de fumée, de température et d’incendie,
               communication via MQTT, affichage des alertes en temps réel.<br>
-              <strong>Rôle :</strong> choix et intégration des capteurs, programmation du microcontrôleur,
-              configuration de la communication et de la logique d’alerte.
+              <strong>Rôle :</strong> Rôle : conception du modèle, développement de la simulation en Java 
+              et implémentation de la logique d’alerte.
+
             </p>
           </div>
         </div>
@@ -338,6 +341,9 @@
             </div>
           </div>
 
+
+          
+
           <!-- Recommandation 2 -->
           <div class="card recommendation-card">
             <div class="recommendation-header">
@@ -372,9 +378,102 @@
               </button>
             </div>
           </div>
+
+
+
+          <!-- Recommandation 4 -->
+<div class="card recommendation-card">
+  <div class="recommendation-header">
+    <div>
+      <h3>Lettre de recommandation 4</h3>
+      <p class="recommendation-prof">
+        <strong>Dr. Nadjib BENAOUDA</strong> – Maître de conférences<br>
+        Université Mohamed El Bachir El Ibrahimi<br>
+        Département d'Informatique<br>
+        <a class="recommendation-mail" href="mailto:nadjib.benaouda@univ-bba.dz">
+          nadjib.benaouda@univ-bba.dz
+        </a>
+      </p>
+    </div>
+    <span class="recommendation-tag">Master</span>
+  </div>
+
+  <ul class="recommendation-meta">
+    <li><strong>Rôle :</strong> Enseignant en SID & Middleware objet</li>
+  </ul>
+
+  <p class="recommendation-text">
+    Lettre soulignant mes acquis, mon engagement et ma rigueur dans les modules
+    Systèmes d’Information Distribués et Middleware Objet dispensés en Licence 3 et Master 2.
+  </p>
+
+  <div class="recommendation-actions-bottom">
+    <button class="btn small" data-reco="4" data-lang="fr">
+      Consulter la lettre (FR)
+    </button>
+    <!-- Bouton EN désactivé pour garder même alignement -->
+    <button class="btn outline small" style="opacity:0; pointer-events:none;">
+      View letter (EN)
+    </button>
+  </div>
+</div>
+
+        </div>
+
+
+
+        
+      </div>
+
+
+
+      
+    </section>
+
+
+
+        
+<section id="galerie" class="section">
+  <div class="container">
+    <h2>Galerie personnelle</h2>
+    <p class="section-intro">
+      Une sélection d’instants personnels qui témoignent de qui je suis.
+    </p>
+
+    <div class="gallery-grid">
+
+      <div class="gallery-card">
+        <div class="gallery-fixed">
+          <img src="galerie1.jpg" alt="Image 1">
         </div>
       </div>
-    </section>
+
+      <div class="gallery-card">
+        <div class="gallery-fixed">
+          <img src="galerie2.jpg" alt="Image 2">
+        </div>
+      </div>
+
+      <div class="gallery-card">
+        <div class="gallery-fixed">
+          <img src="galerie3.jpg" alt="Image 3">
+        </div>
+      </div>
+         <div class="gallery-card">
+        <div class="gallery-fixed">
+          <img src="galerie4.jpg" alt="Image 3">
+        </div>
+      </div>
+
+         <div class="gallery-card">
+        <div class="gallery-fixed">
+          <img src="galerie5.jpg" alt="Image 3">
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
 
     <!-- À propos -->
     <section class="section">
@@ -394,48 +493,73 @@
       </div>
     </section>
 
-    <!-- Contact -->
-    <section id="contact" class="section">
-      <div class="container">
-        <h2>Contact</h2>
-        <p>
-          Vous pouvez me contacter directement par e-mail ou via ce formulaire.
-        </p>
 
-        <div class="contact-grid">
-          <div>
-            <ul class="contact-list">
-              <li><strong>Email :</strong> <a href="mailto:salioussama213@gmail.com">salioussama213@gmail.com</a></li>
-              <li><strong>Téléphone :</strong> +213 791 81 19 34</li>
-            </ul>
-            <p class="contact-note">
-              Le message du formulaire sera envoyé à cette adresse. Veillez à indiquer un objet clair et un message détaillé.
-            </p>
-          </div>
 
-          <form method="POST" action="https://formspree.io/f/mankqqlv">
-            <input type="hidden" name="_subject" value="Nouveau message depuis le portfolio" />
+      <!-- Contact -->
+<section id="contact" class="section">
+  <div class="container">
+    <h2>Contact</h2>
+    <p>
+      Vous pouvez me contacter directement par e-mail, via Telegram ou en utilisant ce formulaire.
+    </p>
 
-            <div class="form-group">
-              <label for="email">Votre e-mail</label>
-              <input type="email" id="email" name="email" required>
-            </div>
+    <div class="contact-grid">
+      <div>
+        <ul class="contact-list">
+          <li><strong>Email :</strong> <a href="mailto:salioussama213@gmail.com">salioussama213@gmail.com</a></li>
+    <li><strong>Téléphone :</strong> <a href="tel:+213791811934">+213 791 81 19 34</a></li>
 
-            <div class="form-group">
-              <label for="subject">Objet</label>
-              <input type="text" id="subject" name="subject" required>
-            </div>
+          <li>
+            <strong>Telegram :</strong>
+            <a href="https://t.me/@Salioussama" target="_blank" rel="noopener noreferrer">@Salioussama</a>
+          </li>
+        </ul>
 
-            <div class="form-group">
-              <label for="message">Message</label>
-              <textarea id="message" name="message" rows="4" required></textarea>
-            </div>
-
-            <button type="submit" class="btn primary">Envoyer</button>
-          </form>
+        <!-- QR code Telegram -->
+        <div style="margin-top:0.9rem;">
+          <p class="contact-note" style="margin-bottom:0.4rem;">
+            Vous pouvez aussi scanner ce QR code pour m’ajouter directement sur Telegram :
+          </p>
+          <img src="qr-telegram.png"
+               alt="QR code Telegram"
+               style="width:150px; max-width:60%; border-radius:10px; display:block;">
         </div>
       </div>
-    </section>
+
+      <div>
+        <!-- 🔥 Message déplacé ici : AU-DESSUS DES CHAMPS -->
+        <p class="contact-note" style="margin-bottom:1rem;">
+          Le message du formulaire sera envoyé à mon adresse e-mail.
+          Veillez à indiquer un objet clair et un message détaillé.
+        </p>
+
+        <!-- Formulaire -->
+        <form method="POST" action="https://formspree.io/f/mankqqlv">
+          <input type="hidden" name="_subject" value="Nouveau message depuis le portfolio" />
+
+          <div class="form-group">
+            <label for="email">Votre e-mail</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+
+          <div class="form-group">
+            <label for="subject">Objet</label>
+            <input type="text" id="subject" name="subject" required>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+          </div>
+
+          <button type="submit" class="btn primary">Envoyer</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+
   </main>
 
   <!-- Fenêtre modale -->
@@ -791,8 +915,47 @@
           <div style="margin-top:0.6rem; margin-bottom:0.4rem;">
           <img src="signature-moussaoui.png" alt="Signature de Dr. MOUSSAOUI Boubakeur" class="signature-image">
             </div>
+
+`,
+      
+
+            
               
-      `
+     "4-fr": `
+<p><strong>Dr. Nadjib BENAOUDA</strong><br>
+Département d'Informatique<br>
+Université Mohamed El Bachir El Ibrahimi – Bordj Bou Arréridj<br>
+Courriel : <a href="mailto:nadjib.benaouda@univ-bba.dz">nadjib.benaouda@univ-bba.dz</a></p>
+
+<p><strong>Lettre de recommandation</strong></p>
+
+<p>Madame, Monsieur,</p>
+
+<p>Je, soussigné, Dr. Nadjib BENAOUDA, maître de conférences au Département d'Informatique de
+l’Université Mohamed El Bachir El Ibrahimi, certifie avoir enseigné M. <strong>Oussama SALI</strong> depuis
+l’année universitaire 2023/2024. Je l’ai eu comme étudiant dans le module <strong>Systèmes d’information
+distribués</strong> en Licence 3, et je lui enseigne actuellement le module <strong>Middleware objet</strong> en Master 2.</p>
+
+<p>Durant cette période, M. SALI s’est distingué par son sérieux, son autonomie et son
+engagement. Il possède de solides compétences et applique avec efficacité les notions vues en cours,
+travaux dirigés et travaux pratiques. Il démontre également un excellent niveau en programmation,
+notamment en développement web.</p>
+
+<p>Rigoureux, calme et responsable, il adopte toujours un comportement exemplaire et réalise un
+travail de qualité, tant dans les projets que dans les mises en situation pratiques.</p>
+
+<p>Sur cette base, je recommande fortement M. Oussama SALI pour intégrer votre établissement et
+poursuivre brillamment ses études supérieures.</p>
+
+<p>Cordialement,<br>
+<strong>Dr. Nadjib BENAOUDA</strong></p>
+
+            <div style="margin-top:0.6rem; margin-bottom:0.4rem;">
+    <img src="nadjib-benaouda.png" alt="Signature de Dr. Nadjib BENAOUDA" class="signature-image">
+  </div>
+        </div>
+`
+
     };
 
     const modal = document.getElementById('reco-modal');
@@ -838,5 +1001,13 @@
       }
     });
   </script>
+
+
+
+
+
+
+
+
 </body>
 </html>
