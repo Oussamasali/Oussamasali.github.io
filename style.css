@@ -953,3 +953,76 @@ textarea:focus {
   display: block;
   margin: 0 auto;    /* centre l’image dans la modale */
 }
+
+
+
+
+
+
+
+/* --- Galerie ultra-compacte --- */
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.8rem; /* encore plus réduit */
+}
+
+.gallery-card {
+  background: var(--card-bg);
+  border-radius: 8px; /* plus petit */
+  border: 1px solid rgba(255, 255, 255, 0.04); /* bordure très fine */
+  overflow: hidden;
+  padding: 0;
+  box-shadow: var(--shadow-soft);
+}
+
+/* zone photo réduite */
+.gallery-fixed {
+  width: 100%;
+  height: 400px; /* réduit encore (avant 520px) */
+  max-height: 400px;
+  overflow: hidden;
+  border-radius: 8px; /* cohérent avec la carte */
+}
+
+/* image verticale */
+.gallery-fixed img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.22s ease;
+}
+
+/* zoom discret */
+.gallery-fixed img:hover {
+  transform: scale(1.03);
+}
+
+
+/* --- Effet lumière sur les bordures --- */
+
+.gallery-card {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 0;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  background: var(--card-bg);
+  
+  /* Lumière douce autour */
+  box-shadow:
+    0 0 10px rgba(0, 128, 255, 0.5),
+    0 0 20px rgba(255, 0, 0, 0.3),
+    0 0 40px rgba(255, 0, 0, 0.15);
+}
+
+/* Lumière encore plus belle au survol */
+.gallery-card:hover {
+  box-shadow:
+    0 0 6px rgba(0, 195, 255, 0.7),
+    0 0 14px rgba(0, 195, 255, 0.55),
+    0 0 26px rgba(0, 195, 255, 0.35);
+  transition: box-shadow 0.3s ease;
+}
